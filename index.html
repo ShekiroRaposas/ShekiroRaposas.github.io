@@ -8,9 +8,9 @@
 <meta name="description" content="Portfolio of Shekiro R. Raposas, Computer Engineer and Program Head at Lorma Colleges.">
 <style>
 :root{
-  --bg:#f3f4f6;--panel:#ffffff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb;--accent-soft:#eff6ff;--chip:#f9fafb;
+  --bg:#eef5f3;--panel:#ffffff;--ink:#0f2a2a;--muted:#5b6f6e;--line:#d9e7e3;--accent:#0f766e;--accent-soft:#e6f4f1;--chip:#f6fbfa;
   --radius:14px;--shadow:0 1px 2px rgba(16,24,40,.04),0 1px 3px rgba(16,24,40,.06);color-scheme:light dark}
-@media (prefers-color-scheme:dark){:root{--bg:#0b0f17;--panel:#121826;--ink:#e5e7eb;--muted:#9aa4b2;--line:#1f2937;--accent:#60a5fa;--accent-soft:#132036;--chip:#0f1522;--shadow:none}}
+@media (prefers-color-scheme:dark){:root{--bg:#071413;--panel:#0d1f1d;--ink:#e3efec;--muted:#93aba7;--line:#1b3532;--accent:#2dd4bf;--accent-soft:#0f2e2a;--chip:#0a1917;--shadow:none}}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -25,18 +25,19 @@ nav a:hover{color:var(--ink);background:var(--panel)}
 nav .name{color:var(--ink);font-weight:650;font-size:14px;padding-left:0}
 nav .name::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:8px;vertical-align:middle;box-shadow:0 0 0 3px color-mix(in srgb,#22c55e 25%,transparent)}
 .hero,section{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
-.hero{display:grid;grid-template-columns:1fr 160px;gap:28px;align-items:center;padding:32px}
+.hero{background:linear-gradient(135deg,var(--accent-soft),var(--panel) 60%);display:grid;grid-template-columns:1fr 160px;gap:28px;align-items:center;padding:32px}
 .hero h1{font-size:clamp(24px,4.6vw,38px)}
 .hero .role{margin-top:8px;font-size:16px;color:var(--ink)}
 .hero .meta{margin-top:14px;color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:6px 10px}
 .hero .meta span{background:var(--chip);border:1px solid var(--line);padding:3px 10px;border-radius:999px}
 .hero img{width:160px;max-width:100%;height:auto;aspect-ratio:1/1;border-radius:50%;object-fit:cover;justify-self:end;border:3px solid var(--panel);box-shadow:0 0 0 1px var(--line)}
 section{margin-top:16px;padding:24px 28px}
-section h2{font-size:13px;font-weight:650;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+section h2{font-size:13px;font-weight:650;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--line)}
 p{margin:0;max-width:72ch}
 .entry{display:grid;grid-template-columns:140px 1fr;gap:4px 20px;padding:14px 0;border-top:1px solid var(--line)}
 section h2+.entry{border-top:0;padding-top:4px}
 .entry .when{color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums;padding-top:2px}
+.entry .when{color:var(--accent)}
 .entry h3{margin:0;font-size:15.5px;font-weight:600;line-height:1.4}
 .entry .org{color:var(--muted);font-size:14px}
 .entry ul{margin:6px 0 0;padding-left:18px;max-width:68ch;color:var(--ink)}
@@ -75,6 +76,33 @@ footer{margin-top:16px;padding:16px 4px;color:var(--muted);font-size:13px;text-a
   section{padding:20px 18px}
   .entry{grid-template-columns:1fr;gap:2px}
 }
+
+/* colorful theme */
+:root{--bg:#f2f8f7;--panel:#ffffff;--ink:#0f2530;--muted:#5d7380;--line:#dcebea;--accent:#059669;--accent-soft:#e6f6f0;--chip:#f8fcfb}
+@media (prefers-color-scheme:dark){:root{--bg:#06141a;--panel:#0c2029;--ink:#e2f0f2;--muted:#95b0b8;--line:#173540;--accent:#34d399;--accent-soft:#0f2f33;--chip:#081a21}}
+body{background:radial-gradient(1200px 600px at 10% -10%,#d7f5e7 0,transparent 60%),radial-gradient(1000px 500px at 110% 10%,#dbeeff 0,transparent 55%),var(--bg)}
+@media (prefers-color-scheme:dark){body{background:radial-gradient(1200px 600px at 10% -10%,#0b3a2a 0,transparent 60%),radial-gradient(1000px 500px at 110% 10%,#0c2a4d 0,transparent 55%),var(--bg)}}
+.hero{grid-template-columns:150px 1fr;background:linear-gradient(120deg,#047857 0%,#0d9488 45%,#2563eb 100%);border:0;color:#fff}
+.hero h1{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.18)}
+.hero img{justify-self:start;width:150px;border:4px solid rgba(255,255,255,.9);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.hero .meta{margin-top:16px;color:#fff}
+.hero .meta span{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);color:#fff}
+section{border-top:4px solid var(--c,#059669)}
+section h2{color:var(--c,#059669)}
+#about{--c:#059669}#experience{--c:#2563eb}#research{--c:#0d9488}#education{--c:#16a34a}#skills{--c:#0284c7}#certificates{--c:#047857}#contact{--c:#1d4ed8}
+.entry .when{color:var(--c)}
+.skills li:nth-child(5n+1){background:#e3f7ee;border-color:#a7e3c8}
+.skills li:nth-child(5n+2){background:#e4efff;border-color:#b3cdfb}
+.skills li:nth-child(5n+3){background:#e0f5f3;border-color:#a3dcd5}
+.skills li:nth-child(5n+4){background:#eaf7e6;border-color:#bfe5b3}
+.skills li:nth-child(5n+5){background:#e2f4fd;border-color:#a8dcf7}
+@media (prefers-color-scheme:dark){.skills li{background:var(--accent-soft)!important;border-color:var(--line)!important}}
+
+h3.group{color:var(--c)}
+.cert:hover{border-color:var(--c)}
+nav .name{background:linear-gradient(90deg,#059669,#2563eb);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav a:hover{color:var(--accent)}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.hero img{width:110px}}
 </style>
 </head>
 <body>
@@ -88,15 +116,15 @@ footer{margin-top:16px;padding:16px 4px;color:var(--muted);font-size:13px;text-a
   </nav>
 
   <header class="hero" id="top">
+    <img src="images/img01.jpg" alt="Portrait of Shekiro R. Raposas" width="480" height="480">
     <div>
       <h1>SHEKIRO R. RAPOSAS, MIS</h1>
-      <div class="role">Computer Engineer &middot; Program Head, Computer Engineering at Lorma Colleges</div>
       <div class="meta">
-        <span>San Fernando City, La Union, Philippines</span>
-        <span>shekiro.raposas16001@gmail.com</span>
+        <span>&#128205; San Fernando City, La Union, Philippines</span>
+        <span>&#9993;&#65039; shekiro.raposas16001@gmail.com</span>
+        <span>&#128222; +63 992 281 4030</span>
       </div>
     </div>
-    <img src="images/img01.jpg" alt="Portrait of Shekiro R. Raposas" width="480" height="480">
   </header>
 
   <section id="about">
@@ -108,7 +136,7 @@ footer{margin-top:16px;padding:16px 4px;color:var(--muted);font-size:13px;text-a
     <h2>Experience</h2>
     <div class="entry"><div class="when">2025 &ndash; Present</div><div><h3>Program Head, Computer Engineering</h3><div class="org">Lorma Colleges</div><ul><li>Lead program-level planning, curriculum development, and quality assurance aligned with CHED standards.</li><li>Supervise and mentor faculty, coordinate course offerings, and monitor student academic outcomes.</li></ul></div></div>
     <div class="entry"><div class="when">2023 &ndash; Present</div><div><h3>Computer Engineering Instructor</h3><div class="org">Lorma Colleges</div><ul><li>Design and deliver undergraduate courses in Computer Engineering and IT, covering programming, networking, and emerging technologies.</li><li>Develop outcomes-based instructional materials; advise students on capstone research and career planning.</li></ul></div></div>
-    <div class="entry"><div class="when">2025 &ndash; Present</div><div><h3>Visiting Professor (Adjunct)</h3><div class="org">Metro Business College</div><ul><li>Deliver Computer Engineering and IT coursework.</li></ul></div></div>
+    <div class="entry"><div class="when">2025 &ndash; Present</div><div><h3>Visiting Professor (Adjunct)</h3><div class="org">Metro Business College</div><ul><li>Handle courses in the Bachelor of Science in Computer Science program.</li></ul></div></div>
     <div class="entry"><div class="when">2025</div><div><h3>Research Coordinator, CCSE</h3><div class="org">Lorma Colleges</div><ul><li>Coordinated college-wide research and its dissemination through conference presentation and publication.</li></ul></div></div>
     <div class="entry"><div class="when">2024 &ndash; 2025</div><div><h3>Extension Coordinator, CCSE</h3><div class="org">Lorma Colleges</div><ul><li>Planned community extension programs and worked with partner communities and institutional stakeholders.</li></ul></div></div>
     <div class="entry"><div class="when">2023</div><div><h3>SBO Adviser, CCSE</h3><div class="org">Lorma Colleges</div><ul><li>Advised the student body organization on student-led events and leadership development.</li></ul></div></div>
@@ -246,7 +274,7 @@ document.querySelectorAll('.copy').forEach(function(b){
   var c=document.getElementById('bg-net');if(!c||!c.getContext)return;
   var ctx=c.getContext('2d'),dpr=Math.min(window.devicePixelRatio||1,2),W=0,H=0,pts=[],mouse={x:-9999,y:-9999};
   var still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var LINK=140;var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;var RGB=dark?'148,163,184':'100,116,139';
+  var LINK=140;var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;var RGB=dark?'52,211,153':'5,150,105';
   function resize(){
     W=window.innerWidth;H=window.innerHeight;c.width=W*dpr;c.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
     var n=Math.round(Math.min(90,Math.max(28,W*H/16000)));
